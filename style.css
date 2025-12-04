@@ -1,6 +1,6 @@
-/* style.css - Verdant site (white nav + blue accents) */
+/* style.css - Verdant site white nav + blue(WELL GREEN) accents */
 :root{
-  --accent: #21A2FF; 
+  --accent: #4CBB17; 
   --bg: #f7f9fc;
   --text: #071227;
   --muted: #6b7280;
@@ -9,7 +9,7 @@
   --container: 1100px;
   --shadow: 0 10px 30px rgba(2,6,23,0.06);
 }
-
+/*IM GONNA DIEEE PLS HELPP OMG*/
 /* base */
 *{box-sizing:border-box;/*outline: 2px solid rgba(255, 0, 0, 0.4);*/}
 html, body{min-height: 100%; height: auto; overflow-y: auto;-webkit-tap-highlight-color: transparent;}
