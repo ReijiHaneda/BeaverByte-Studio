@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Merriweather, Archivo_Black, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     siteName: "Dream Team — Verdant",
     images: [
       {
-        url: "https://i.imgur.com/z1yoZwp.png",
+        url: "/logo.svg",
         width: 1200,
         height: 675,
         alt: "Verdant game screenshot — farm, build and explore dynamic living worlds",
@@ -77,7 +79,7 @@ export const metadata: Metadata = {
     site: "@DreamTeamGames",
     title: "Verdant — Dream Team Games",
     description: "Devlogs and updates for Verdant — a top-down 2D sandbox adventure coming to PC & mobile",
-    images: ["https://i.imgur.com/z1yoZwp.png"],
+    images: ["/logo.svg"],
   },
   robots: {
     index: true,
@@ -103,10 +105,10 @@ export default function RootLayout({
       <head>
         {/* Favicon links */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" href="https://i.imgur.com/hpD0KcS.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/hpD0KcS.png" />
+        <link rel="icon" type="image/png" href="/logo.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo.svg" />
         <meta name="apple-mobile-web-app-title" content="Verdant" />
-        <link rel="icon" type="image/png" href="https://i.imgur.com/hpD0KcS.png" sizes="192x192" />
+        <link rel="icon" type="image/png" href="/logo.svg" sizes="192x192" />
 
         {/* Schema Markup for better rich snippets */}
         {/* Organization Schema */}
@@ -231,7 +233,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${merriweather.variable} ${archivoBlack.variable} ${openSans.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
